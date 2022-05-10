@@ -11,5 +11,12 @@ function outer() {
   };
 }
 
-let ans = outer();
-console.log(ans());
+// let ans = outer();
+// console.log(ans());
+
+var masai = function () {
+  //   alert("Masai School");
+  console.log("Hello");
+};
+
+masai();
