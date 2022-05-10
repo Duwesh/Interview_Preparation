@@ -16,11 +16,11 @@ let obj = {
 // console.log(json_copy, obj);
 // console.log(json_copy === obj);
 
-let obj_copy = Object.assign(obj);
-obj_copy.name = "sarbesh";
+// let obj_copy = Object.assign({}, obj);
+// obj_copy.name = "sarbesh";
 
-console.log(obj);
-console.log(obj_copy);
+// console.log(obj);
+// console.log(obj_copy);
 
 function deep(obj) {
   //If primitive type then simply return the obj
@@ -38,7 +38,13 @@ function deep(obj) {
   return copy;
 }
 
-// let copied = deep(obj);
-// copied.name = "naresh";
-// console.log(copied);
-// console.log(obj);
+let copied = deep(obj);
+copied.name = "naresh";
+console.log(copied);
+console.log(obj);
+
+//Issues with the other approaches
+
+//1. using JSON.stringify , since JSON donot provide us to store func
+//2. using Object.assign, It doesnot provide deep copy for nesting function
+//3. We can make our custom function to overcome this error
