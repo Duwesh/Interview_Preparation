@@ -8,7 +8,7 @@ function fetch() {
 //debounce func
 function debounce(cb, delay) {
   let timer;
-  return function () {
+  return function (...args) {
     if (timer) clearTimeout(timer);
     else setTimeout(cb, delay);
   };
@@ -16,5 +16,5 @@ function debounce(cb, delay) {
 
 let optimisedFunc = debounce(fetch, 1000);
 // console.log(typeof optimisedFunc);
-optimisedFunc();
+// optimisedFunc();
 // fetch();
