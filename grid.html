@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Implementation</title>
+    <style>
+      .container {
+        display: grid;
+        background-color: black;
+        padding: 10px;
+        height: 50vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-gap: 5px;
+        grid-template-areas:
+          "header header header"
+          "side main main"
+          "side main main"
+          "side main main"
+          "footer footer footer";
+      }
+      .grid-item {
+        border: 1px solid teal;
+        background-color: aqua;
+        text-align: center;
+        /* height: 30px; */
+      }
+      .item1 {
+        grid-area: header;
+        background-color: dodgerblue;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .item1 a {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+      }
+      .item2 {
+        grid-area: side;
+        /* grid-row: 2/ -1; */
+        /* grid-column: 1/ 3; */
+        background-color: gold;
+        overflow: scroll;
+      }
+      .item3 {
+        grid-area: main;
+        background-color: crimson;
+      }
+      .item4 {
+        grid-area: footer;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 style="text-align: center; color: dodgerblue; font-weight: bold">
+      Grid Layout
+    </h3>
+    <div class="container">
+      <div class="grid-item item1">
+        <a href="#"
+          >Home
+          <select name="all" id="all">
+            <option value="teacher">teacher</option>
+            <option value="student">student</option>
+            <option value="staff">staff</option>
+            <option value="outsider">outsider</option>
+          </select>
+        </a>
+        <a href="#">About</a>
+        <a href="#">Main</a>
+      </div>
+      <div class="grid-item item2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
+        quibusdam ducimus excepturi sed officiis voluptate hic aspernatur
+        reprehenderit. Fuga, illo tempore dolor porro obcaecati perspiciatis
+        velit molestias consectetur odio quibusdam delectus, exercitationem quae
+        optio laudantium placeat facere repellendus distinctio, veniam modi
+        voluptatem! Non cupiditate eos voluptatum voluptas ipsam nobis
+        consequuntur beatae laudantium quae, dolores debitis aperiam suscipit
+        aliquam sint minus officiis quis, ad totam. Vitae, voluptatem? Beatae
+        praesentium minus pariatur optio veritatis vitae molestias dolorem rem
+        consectetur ad minima temporibus impedit nam aliquam reprehenderit
+        dignissimos eius atque harum quos facere, at amet ratione. Aliquam
+        consequatur, officia at doloremque aperiam quos?
+      </div>
+      <div class="grid-item item3">Item 3</div>
+      <div class="grid-item item4">Item 4</div>
+    </div>
+  </body>
+</html>
