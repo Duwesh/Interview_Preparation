@@ -1,7 +1,7 @@
-//Promise is technically a plain javascript object which is used to find out the value of async operation
+//Promise is technically a plain javascript object which is used to find out if  async operation is completed or not.
 
 //promise will be always either of in three state
-//1.Pending State(Initial state when promise has started)
+//1.Pending State(Initial state when promise has started, i.e promise is not complete)
 //2.Resolved State(when promise has been successfully resolved and produces a value)
 //3.Reject State(when promise has not been successfully executed and there is some error)
 
