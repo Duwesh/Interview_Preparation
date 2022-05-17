@@ -27,6 +27,39 @@
       placeholder="Enter your text..."
     />
     <button id="btn">Pay Now</button>
+    <table border="1">
+      <tr>
+        <td>Cell1</td>
+        <td>
+          Cell2
+          <table border="1">
+            <tr>
+              <td>1</td>
+              <td>2</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <div id="container">
+      <h2 id="content"></h2>
+    </div>
     <script src="debouncing.js"></script>
   </body>
 </html>
+<script>
+  // let container = document.getElementById("container");
+  // let content = document.getElementById("content");
+  // content.textContent = "Hello";
+  // content.style.color = "dodgerblue";
+
+  //IIFE Version
+  (function curried(container) {
+    return (content) => {
+      document.getElementById(container).innerText = content;
+    };
+  })("container")("Namsate Javasctipt");
+
+  //Normal curried version
+  // curried("container")("Namsate Javascript");
+</script>
