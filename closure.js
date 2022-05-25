@@ -1,6 +1,6 @@
 //Closure is a phenomenon in JS, in which we can access the var of outer func in the inner func, in other words inner func
-//preserve the var of outer func in its scope
-//When a function is bundled together with its own scope and its parent scope or lexical scope is callled closure.
+//preserve the var of outer func in its scope even the outer function has done its execution.
+//When a function is bundled together with its own scope and its parent scope or lexical scope is called closure.
 
 function outer() {
   //var is outer scope

@@ -1,4 +1,5 @@
 //Promise is technically a plain javascript object which is used to find out if  async operation is completed or not.
+//It represent the eventual result of an async operation.
 
 //promise will be always either of in three state
 //1.Pending State(Initial state when promise has started, i.e promise is not complete)

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Masai School",
+    "numberOfEmployes": 100,
+    "CEO": "Nrupul",
+    "rating": 4.5
+  },
+  {
+    "name": "Start Up",
+    "numberOfEmployes": 10,
+    "CEO": null,
+    "rating": 2.5
+  }
+]
