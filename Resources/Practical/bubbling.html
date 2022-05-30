@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubbling and Delegation with Capturing</title>
+    <style>
+      .parent {
+        background-color: dodgerblue;
+        padding: 2rem;
+      }
+      .parent > li {
+        border: 1px solid white;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="parent">
+      <li class="first_child">Categories</li>
+      <li class="second_child">Products</li>
+      <li class="third_child">Shopping</li>
+    </ul>
+    <h4>Advantage Of Event Delegation</h4>
+    <p style="color: teal; font-weight: bold;">
+      One Important thing to note, It uses event bubbling phase to handle event.
+    </p>
+    <p>1. Less Code since, we just need to write event for parent</p>
+    <p>2. Can be used for Dynamic content such as infinite scrolling</p>
+    <p>3. Performance Optimization, since it will consume less memory</p>
+
+    <h4>Disadvantage or Cons</h4>
+    <p>1. Can't be applied for All events such as <b>onfous, onblur,</b> etc</p>
+  </body>
+</html>
+<script>
+  let parent = document.querySelector(".parent");
+  let child_1 = document.querySelector(".first_child");
+  let child_2 = document.querySelector(".second_child");
+  let child_3 = document.querySelector(".third_child");
+  parent.addEventListener("click", (e) => {
+    alert("Parent Clicked");
+    if (e.target.tagName == "LI") {
+      window.location.href = "/product.html";
+    }
+    console.log(e.target.tagName);
+  });
+
+  child_1.addEventListener("click", (e) => {
+    alert("clicked");
+    console.log(e.target);
+    child_1.style.color = "red";
+    // window.location.href = "./categories.html";
+    // Stop propagation
+    // e.stopPropagation();
+  });
+
+  child_2.addEventListener("click", (e) => {
+    alert("clicked");
+    console.log(e.target);
+    child_2.style.color = "red";
+    // window.location.href = "./product.html";
+  });
+
+  child_3.addEventListener("click", (e) => {
+    alert("clicked");
+    console.log(e.target);
+    child_3.style.color = "red";
+    // window.location.href = "./shopping.html";
+  });
+</script>
